@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "122c0127-ff30-4d27-b291-e882896f9ef3",
+		"name": "API NASA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23329044"
+	},
+	"item": [
+		{
+			"name": "Instrumentos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/instruments",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"instruments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instrumentos-con-fechas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/instruments?startDate=2024-05-01&endDate=2024-06-30",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"instruments"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-05-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2024-06-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actividades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/activity-ids",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"activity-ids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actividades-con-fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/activity-ids?startDate=2024-11-01&endDate=2024-12-31",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"activity-ids"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-11-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2024-12-31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instrument Activity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/instruments-usage",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"instruments-usage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instrument-Activity-con-fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/instruments-usage?startDate=2024-11-01&endDate=2024-11-30",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"instruments-usage"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2024-11-01"
+						},
+						{
+							"key": "endDate",
+							"value": "2024-11-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instrument-Activity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"instrument\": \"SOHO: LASCO/C2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/instrument-activity",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"instrument-activity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instrument-Activity-con-fecha",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"instrument\": \"SOHO: LASCO/C2\",\r\n  \"startDate\": \"2024-03-01\",\r\n  \"endDate\": \"2024-03-31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/instrument-activity",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"instrument-activity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
